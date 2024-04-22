@@ -113,6 +113,7 @@ gap: 40px;
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
+  padding: 188px 0;
 }
 
 .subject {
@@ -146,6 +147,7 @@ margin-bottom: 48px;
     margin-right: auto;
     min-width: 169px;
     font-family: inherit;
+    display: block;
 
 
 }
@@ -155,9 +157,22 @@ margin-bottom: 48px;
 }
 /* Features */
 
-.features-title {
-display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+.features-title {
+  margin-bottom: 8px;
+}
+
 .features-list {
     display: flex;
         align-items: center;
@@ -193,16 +208,19 @@ display: none;
   color: #2e2f42;
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 72px
 }
 .our-team-list {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    margin-top: 72px;
 }
 .our-team-item {
   background: #fff;
 width: calc((1128px - 3 * 24px) / 4);
+}
+.our-team-item:first-child {
+border-radius: 0px 0px 4px 4px;
 }
 .our-team-name {
   font-weight: 500;
@@ -210,14 +228,13 @@ width: calc((1128px - 3 * 24px) / 4);
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-padding-bottom: 4px;
+margin-bottom: 8px
 }
 .our-team-job {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  padding-top: 4px;
 }
 .our-team-desc-card {
     padding-top: 32px;
@@ -228,6 +245,9 @@ padding-bottom: 4px;
 
 /* Our Portfolio */
 
+.our-portfolio-container {
+padding: 32px 16px;
+}
 .our-portfolio-title {
   font-size: 36px;
   line-height: 1.11;
@@ -235,12 +255,12 @@ padding-bottom: 4px;
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .our-portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    row-gap: 48px;
 
 }
 .our-portfolio-item {
@@ -253,25 +273,17 @@ padding-bottom: 4px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding-top: 32px;
-  padding-bottom: 4px;
-padding-left: 16px;
+  margin-bottom: 8px;
 }
 .our-portfolio-desc {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  padding-top: 4px;
-  padding-left: 16px;
-  padding-bottom: 32px;
 }
 /* Footer */
 .footer-container {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 0px;
-    padding-right: 864px;
+  padding: 100px 0;
 }
 .footer-section {
 background: #2e2f42;
@@ -284,6 +296,8 @@ letter-spacing: 0.03em;
 color: #4d5ae5;
 font-family: "Raleway", sans-serif;
 text-transform: uppercase;
+display: inline-block;
+margin-bottom: 16px;
 }
 .logo-footer-part {
 color: #f4f4fd;
@@ -293,5 +307,4 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #f4f4fd;
-margin-top: 16px;
 }
