@@ -445,6 +445,7 @@ border: 1px solid #fff;
     line-height: 2;
     letter-spacing: 0.04em;
     color: #fff;
+    padding-left: 16px;
 }
 .footer-input::placeholder{
   font-size: 12px;
